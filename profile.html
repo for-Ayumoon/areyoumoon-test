@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Profile - Shinogaya Ayumu Archive</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
+	<link rel="stylesheet" href="assets/css/ionicons.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/animate.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
+	
+	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+	
+	<style>
+		/* =========================================
+		   PC・スマホ共通：スクロールロックの完全解除
+		========================================= */
+		html, body, .container, .wrapper {
+			height: auto !important;
+			overflow-y: auto !important;
+			overflow-x: hidden !important;
+		}
+
+		/* フォント設定 */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .profile-name-en, .profile-name-ja, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* 枠線基本色 */
+		.line.top, .line.bottom, .line.left, .line.right {
+			background: #ff70b5 !important;
+		}
+		
+		/* ホバー時の色変更 */
+		a:hover, .top-menu ul li a:hover {
+			color: #ffdc00 !important;
+			transition: color 0.3s ease;
+		}
+		.top-menu ul li.active a {
+			color: #ffdc00 !important;
+		}
+		
+		/* プロフィールレイアウト（PC用） */
+		.profile-box {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 40px;
+			max-width: 850px;
+			margin: 0 auto;
+			text-align: left;
+			padding: 0 20px;
+		}
+		
+		/* 修正箇所：Safariバグ対策のため、高さを明示的に指定 */
+		.profile-image {
+			width: 280px;
+			height: 350px; /* aspect-ratioの代わりに直接指定 */
+			background: #eee;
+			border: 2px solid #ff70b5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #999;
+			font-size: 12px;
+			transition: border-color 0.3s ease;
+			flex-shrink: 0;
+			overflow: hidden; /* はみ出し防止 */
+		}
+		.profile-image:hover {
+			border-color: #ffdc00 !important;
+		}
+		.profile-text {
+			color: #141414;
+			width: 100%;
+		}
+		.profile-name-ja {
+			font-size: 40px;
+			margin-bottom: 5px;
+			letter-spacing: 0.1em;
+		}
+		.profile-name-en {
+			font-size: 18px;
+			color: #888;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			letter-spacing: 0.2em;
+		}
+		.profile-details dl {
+			display: grid;
+			grid-template-columns: 180px 1fr;
+			gap: 15px 10px;
+			font-size: 16px;
+		}
+		.profile-details dt {
+			color: #888;
+			font-weight: normal;
+		}
+		.profile-details dd {
+			margin: 0;
+		}
+
+		/* フッターを最下部に流す（固定解除） */
+		footer {
+			position: relative !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			padding: 30px 65px !important;
+			margin-top: 60px;
+			background: white;
+			z-index: 100;
+		}
+		
+		/* =========================================
+		   スマホ用レスポンシブ設定
+		========================================= */
+		@media (max-width: 768px) {
+			header .head-top { padding: 15px 10px !important; }
+			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
+			.top-menu ul li { margin: 0 !important; display: block; }
+			.top-menu ul li a { font-size: 14px; margin-top: 5px !important; }
+			.menu-btn { display: none !important; }
+			
+			.section.started { padding: 100px 0 20px !important; }
+			
+			/* スマホ用フッター調整 */
+			footer { padding: 15px !important; text-align: center; margin-top: 40px; }
+			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
+
+			/* スマホ用のプロフィール調整 */
+			.profile-box { flex-direction: column; align-items: center; gap: 20px; padding: 0 15px; }
+			
+			/* 修正箇所：スマホサイズでも高さを明示的に指定 */
+			.profile-image { 
+				width: 220px; 
+				height: 275px; 
+			}
+			
+			.profile-name-ja { font-size: 28px; text-align: center; }
+			.profile-name-en { font-size: 14px; text-align: center; margin-bottom: 20px; }
+			.profile-details dl { grid-template-columns: 120px 1fr; gap: 10px; font-size: 14px; width: 100%; }
+		}
+	</style>
+	
+</head>
+
+<body>	
+	
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="pre-inner">
+					<div class="load typing-load"><p>loading...</p></div>
+					<span class="typed-load"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		
+		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
+			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
+				<a href="#" class="menu-btn"><span></span></a>
+				<div class="top-menu">
+					<ul>
+						<li class="ml-[50px] inline-block align-top"><a href="index.html" class="lnk block mt-[12px]">Home</a></li>
+						<li class="active ml-[50px] inline-block align-top"><a href="profile.html" class="lnk block mt-[12px]">Profile</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="gallery.html" class="lnk block mt-[12px]">Gallery</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="fancam.html" class="lnk block mt-[12px]">Fancam</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="link.html" class="lnk block mt-[12px]">Link</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		<div class="wrapper">
+		
+			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 0px;">
+				<div class="centrize full-width">
+					<div class="vertical-center">
+						<div class="started-content inline-block align-middle text-center relative">
+							
+							<div class="profile-box">
+								<div class="profile-image glitch-effect">
+									<img src="assets/images/shinogayaayumu_5.jpg" alt="AYUMU" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.textContent='PHOTO'">
+								</div>
+								
+								<div class="profile-text">
+									<div class="profile-name-ja glitch-effect" data-text="篠ヶ谷 歩夢">篠ヶ谷 歩夢</div>
+									<div class="profile-name-en">SHINOGAYA AYUMU</div>
+									
+									<div class="profile-details">
+										<dl>
+											<dt>生年月日</dt><dd>2001/07/24</dd>
+											<dt>出身地</dt><dd>静岡県</dd>
+											<dt>身長</dt><dd>１７５</dd>
+											<dt>趣味</dt><dd>パスタ研究</dd>
+											<dt>特技</dt><dd>水泳</dd>
+											<dt>MBTI</dt><dd>ISTP</dd>
+											<dt>私を表すキーワード</dt><dd>臥薪嘗胆</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<footer class="fixed">
+			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="clr"></div>
+		</footer>
+		
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+		
+	</div>
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.js"></script>
+	<script src="assets/js/typed.js"></script>
+	<script src="assets/js/magnific-popup.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/isotope.pkgd.js"></script>
+	
+	<script src="assets/js/glitche-scripts.js"></script>
+	
+</body>
+</html>
