@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Gallery - Shinogaya Ayumu Archive</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
+	<link rel="stylesheet" href="assets/css/ionicons.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/animate.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
+	
+	<link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+	
+	<style>
+		/* =========================================
+		   PC・スマホ共通：スクロールロックの完全解除
+		========================================= */
+		html, body, .container, .wrapper {
+			height: auto !important;
+			overflow-y: auto !important;
+			overflow-x: hidden !important;
+		}
+
+		/* フォント設定 */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, .h-title, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* 枠線基本色 */
+		.line.top, .line.bottom, .line.left, .line.right {
+			background: #ff70b5 !important;
+		}
+		
+		/* ホバー時の色変更 */
+		a:hover, .top-menu ul li a:hover {
+			color: #ffdc00 !important;
+			transition: color 0.3s ease;
+		}
+		.top-menu ul li.active a {
+			color: #ffdc00 !important;
+		}
+		
+		/* 小見出しのデザイン */
+		.gallery-subheading {
+			font-size: 26px;
+			font-weight: bold;
+			color: #1a1a1a;
+			margin: 50px 0 20px;
+			letter-spacing: 0.05em;
+			text-align: center;
+		}
+
+		/* ギャラリーレイアウト（PC） */
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: 15px;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.gallery-item {
+			border: 2px solid #ff70b5;
+			transition: border-color 0.3s ease;
+			overflow: hidden; /* ホバー時の拡大用 */
+			display: block;
+			background: #eee; /* 読み込み前の背景色 */
+			min-height: 200px; /* 万が一の画像切れ時も潰れないように最低限の高さを確保 */
+		}
+		.gallery-item:hover {
+			border-color: #ffdc00 !important;
+		}
+		.gallery-item img {
+			display: block;
+			width: 100%;
+			height: auto; /* 縦横比を維持して表示（見切れ防止） */
+			transition: transform 0.3s ease;
+		}
+		.gallery-item:hover img {
+			transform: scale(1.05);
+		}
+
+		/* フッターを最下部に流す（固定解除） */
+		footer {
+			position: relative !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			padding: 30px 65px !important;
+			margin-top: 60px;
+			background: white;
+			z-index: 100;
+		}
+
+		/* =========================================
+		   スマホ用レスポンシブ設定
+		========================================= */
+		@media (max-width: 768px) {
+			/* ヘッダー＆メニュー */
+			header .head-top { padding: 15px 10px !important; }
+			.top-menu ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; padding: 0; }
+			.top-menu ul li { margin: 0 !important; display: block; }
+			.top-menu ul li a { font-size: 14px; margin-top: 5px !important; }
+			.menu-btn { display: none !important; }
+			
+			/* 余白とタイトル */
+			.section.started { padding: 100px 0 20px !important; }
+			.h-title { font-size: 42px !important; margin-bottom: 20px !important; }
+			.gallery-subheading { font-size: 18px; margin: 40px 0 15px; }
+			
+			/* スマホ用フッター調整 */
+			footer { padding: 15px !important; text-align: center; margin-top: 40px; }
+			footer .copy { float: none !important; display: inline-block; font-size: 11px; }
+
+			/* ギャラリー（スマホでは2列） */
+			.gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 15px; }
+			.gallery-item { min-height: 120px; } /* スマホ用の潰れ防止サイズ */
+		}
+	</style>
+	
+</head>
+
+<body>	
+	
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="pre-inner">
+					<div class="load typing-load"><p>loading...</p></div>
+					<span class="typed-load"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		
+		<header class="fixed left-0 top-[30px] w-full z-[100] text-right bg-white opacity-100 visible">
+			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
+				<a href="#" class="menu-btn"><span></span></a>
+				<div class="top-menu">
+					<ul>
+						<li class="ml-[50px] inline-block align-top"><a href="index.html" class="lnk block mt-[12px]">Home</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="profile.html" class="lnk block mt-[12px]">Profile</a></li>
+						<li class="active ml-[50px] inline-block align-top"><a href="gallery.html" class="lnk block mt-[12px]">Gallery</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="fancam.html" class="lnk block mt-[12px]">Fancam</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="link.html" class="lnk block mt-[12px]">Link</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		<div class="wrapper">
+		
+			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0" style="height: auto; padding: 150px 0 0px;">
+				<div class="centrize full-width">
+					<div class="vertical-center">
+						<div class="started-content inline-block align-middle text-center relative">
+							
+							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[20px] glitch-effect" data-text="IMAGE GALLERY">IMAGE <span>GALLERY</span></div>
+							
+							<h2 class="gallery-subheading">PRODUCE 101 JAPAN SHINSEKAI</h2>
+							<div class="gallery-grid">
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_1.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_2.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_3.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_4.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_5.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/shinogayaayumu_6.jpg"></div>
+							</div>
+
+							<h2 class="gallery-subheading">PRODUCE 101 JAPAN SEASON2</h2>
+							<div class="gallery-grid">
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_1.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_2.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_3.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_4.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_5.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_6.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_7.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_8.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_9.jpg"></div>
+								<div class="gallery-item"><img src="assets/images/043_shinogayaayumu_10.jpg"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<footer class="fixed">
+			<div class="copy float-left pt-[2px] text-[13px] text-[#999]">© Ayumoon. Unofficial fan site.</div>
+			<div class="clr"></div>
+		</footer>
+		
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+		
+	</div>
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.js"></script>
+	<script src="assets/js/typed.js"></script>
+	<script src="assets/js/magnific-popup.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/isotope.pkgd.js"></script>
+	
+	<script src="assets/js/glitche-scripts.js"></script>
+	
+</body>
+</html>

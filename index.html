@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Shinogaya Ayumu Archive</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="assets/css/glitche-basic.css" />
+	<link rel="stylesheet" href="assets/css/ionicons.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/animate.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
+	<link rel="stylesheet" href="assets/css/skills.css" />
+	
+	<style>
+		/* 元のテンプレート背景を透明化 */
+		body, header, footer, .section.started, .container { 
+			background: transparent !important; 
+		}
+		
+		/* フォント設定（元の雰囲気を維持） */
+		body, h1, h2, h3, h4, h5, h6, p, a, li, dt, dd, .h-title, .h-subtitle, .typed-subtitle, .copy {
+			font-family: 'Pixelify Sans', 'DotGothic16', sans-serif !important;
+		}
+		
+		/* ページ全体に背景画像を敷く（最背面） */
+		.bg-img-fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -999;
+			object-fit: cover;
+			object-position: 48% 30%; /* 被写体の位置に合わせて調整可能です */
+		}
+
+		/* 文字を見やすくするための暗い半透明マスク */
+		.bg-mask {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			z-index: -998;
+		}
+
+		/* --- テキストと影の調整 --- */
+		/* タイトルの文字色を白にし、きれいでシンプルな黒い影（#000000）をつける */
+		.h-title, .h-title span {
+			color: #ffffff !important;
+			text-shadow: 2px 2px 4px #000000 !important; /* グリッチではなくシンプルな影 */
+		}
+		
+		/* グリッチエフェクト（アニメーションや白い枠）を完全に消す */
+		.glitch-effect:before, .glitch-effect:after {
+			display: none !important;
+		}
+
+		/* サブタイトルやコピーの文字色と影 */
+		.typed-subtitle, .h-subtitle p, .copy {
+			color: #ffffff !important;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+		}
+
+		/* --- メニューとアイコンの調整 --- */
+		.top-menu ul li a, .soc a span {
+			color: #ffffff !important;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+			transition: color 0.3s ease;
+		}
+		
+		/* ホバー時のアクセントカラー */
+		.top-menu ul li a:hover, .soc a:hover span, .top-menu ul li.active a {
+			color: #ffdc00 !important;
+		}
+
+		/* --- レスポンシブ（スマホ）調整 --- */
+		/* スマホ（画面幅768px以下）の場合のみ、文字を下にずらして顔に被らないようにする */
+		@media screen and (max-width: 768px) {
+			.started-content {
+				margin-top: 200px !important; /* 被り具合に合わせて数字を調整してください */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<img src="assets/images/shinogayaayumu_4.jpg" class="bg-img-fixed" alt="Background">
+	<div class="bg-mask"></div>
+
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="pre-inner">
+					<div class="load typing-load"><p>loading...</p></div>
+					<span class="typed-load"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<header class="fixed left-0 top-[30px] w-full z-[100] text-right opacity-100 visible">
+			<div class="head-top px-[65px] pt-[30px] pb-[15px]">
+				<a href="#" class="menu-btn"><span></span></a>
+				<div class="top-menu">
+					<ul>
+						<li class="active ml-[50px] inline-block align-top"><a href="index.html" class="lnk block mt-[12px]">Home</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="profile.html" class="lnk block mt-[12px]">Profile</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="gallery.html" class="lnk block mt-[12px]">Gallery</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="fancam.html" class="lnk block mt-[12px]">Fancam</a></li>
+						<li class="ml-[50px] inline-block align-top"><a href="link.html" class="lnk block mt-[12px]">Link</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		<div class="wrapper">
+			<div class="section started relative z-[97] opacity-100 visible text-center p-0 m-0">
+				<div class="centrize full-width">
+					<div class="vertical-center">
+						<div class="started-content inline-block align-middle text-center relative">
+							<div class="h-title text-[68px] font-bold uppercase tracking-[0.04em] mx-0 mt-[10px] mb-[5px] glitch-effect" data-text="SHINOGAYA AYUMU">SHINOGAYA <span>AYUMU</span></div>
+							
+							<div class="h-subtitle text-[15px] typing-subtitle">
+								<p>夢を叶えるとは歩き続けるということ。</p>
+								<p>篠ヶ谷歩夢はうなだれない！</p>
+								<p>沼度 724%</p>
+								<p>カワイイ × カッコイイ × 不思議 ＝ 超アイドル！</p>
+								<p>静岡発、うなぎパイダンスで見つかる男。</p>
+								<p>弁当少年団のあの子、もう一度ステージへ。</p>
+								<p>顔面、透明感、想い。全部つよい。</p>
+								<p>歩夢の底なし沼♡ きゅるフェイスとわたあめボイス。</p>
+								<p>仲間思いなリーダーの、ほんわかモーメント。</p>
+								<p>知れば知るほど♡ 憑依型パフォ × 指先まで美しい舞</p>
+								<p>気付いたら、もう抜け出せない。</p>
+								<p>立てば芍薬 座れば牡丹 夢へ歩むは月光花</p>
+							</div>
+							<span class="typed-subtitle text-[15px]"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer class="fixed bottom-[25px] left-0 px-[60px] pt-[15px] pb-[30px] w-full z-[100] opacity-100 visible">
+			<div class="soc float-right">
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://x.com/FandomAyumoon"><span class="ion ion-social-twitter text-[17px]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.instagram.com/fandomayumoon/"><span class="ion ion-social-instagram-outline text-[17px]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://line.me/ti/g2/Y2MorXW6SwGOvvuHe9HaJ7jqNTz2-7lYUcs_ZA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default&_gl=1*1imnqkj*_gcl_au*MTI2Nzg3ODI4Ni4xNzgwNDc3Njc4*_ga*MjA5MzU4NjMyNi4xNzgwNDc3Njc5*_ga_0PV16Y9CZG*czE3ODA0Nzc2NzkkbzEkZzAkdDE3ODA0Nzc2ODUkajU0JGwwJGgw"><span class="ion ion-chatbubble text-[17px]"></span></a>
+				<a class="inline-block align-middle ml-[12px]" target="_blank" href="https://www.tiktok.com/@fandomayumoon"><span class="ion ion-music-note text-[17px]"></span></a>
+			</div>
+			<div class="copy float-left pt-[2px] text-[13px]">© Ayumoon. Unofficial fan site.</div>
+			<div class="clr"></div>
+		</footer>
+	</div>
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/typed.js"></script>
+	<script src="assets/js/glitche-scripts.js"></script>
+</body>
+</html>
